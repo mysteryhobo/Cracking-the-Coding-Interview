@@ -7,10 +7,10 @@ public class Question3 {
 
 	public int findMagicindex(int min, int max) {
 		if (min > max) return -1;
-		int middle = (max - min)/2;
+		int middle = (max + min)/2;
 		System.out.println(middle);
 		if (array[middle] > middle) return findMagicindex(min, middle - 1);
-		else if (array[middle] < middle) return findMagicindex(middle, max);
+		else if (array[middle] < middle) return findMagicindex(middle + 1, max);
 		else return middle;
 	}	
 }
